@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const userRoot = require("./router/users");
+const authUserRoot = require("./router/auth");
 
 const app = express();
 dotenv.config();
@@ -22,9 +24,8 @@ app.get('/', (req, res)=> {
   res.send("welcome to home page");
 });
 
-app.get('/user', (req, res)=> {
-  res.send("welcome to user page");
-});
+app.use('/api/users', userRoot);
+app.use('/api/auth/users', authUserRoot);
 
 
 app.listen(PORT, ()=> {
