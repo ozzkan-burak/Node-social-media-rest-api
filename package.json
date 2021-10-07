@@ -1,0 +1,19 @@
+{
+  "name": "node-social-media-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozzkan-burak/Node-social-media-rest-api.git"
+  },
+  "author": "Burak Özkan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozzkan-burak/Node-social-media-rest-api/issues"
+  },
+  "homepage": "https://github.com/ozzkan-burak/Node-social-media-rest-api#readme"
+}
