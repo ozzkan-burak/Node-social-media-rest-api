@@ -25,7 +25,7 @@ app.get('/', (req, res)=> {
 });
 
 app.use('/api/users', userRoot);
-app.use('/api/auth/users', authUserRoot);
+app.use('/api/auth', authUserRoot);
 
 
 app.listen(PORT, ()=> {
