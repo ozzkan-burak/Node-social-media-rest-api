@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoot = require("./router/users");
 const authUserRoot = require("./router/auth");
+const postsRoot = require("./router/posts");
 
 const app = express();
 dotenv.config();
@@ -24,8 +25,9 @@ app.get('/', (req, res)=> {
   res.send("welcome to home page");
 });
 
-app.use('/api/users', userRoot);
 app.use('/api/auth', authUserRoot);
+app.use('/api/users', userRoot);
+app.use('/api/posts', postsRoot);
 
 
 app.listen(PORT, ()=> {
